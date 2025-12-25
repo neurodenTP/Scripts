@@ -153,7 +153,7 @@ plt.show()
 # )
 #%%
 
-raw_crop = raw_ica.copy().crop(tmin=1000)
+raw_crop = raw_ica.copy().crop(tmin=1)
 
 freqs, psds, fg, clean_ch_names = compute_fooof_models(
     raw_crop,
@@ -176,7 +176,7 @@ df_fooof = fooof_and_bandpowers_to_df(
     max_n_peaks=4,
 )
 
-out_path = dir_name + "/" + resp_name + "_fooof_1000+.xlsx"
+out_path = dir_name + "/" + resp_name + "_fooof.xlsx"
 df_fooof.reset_index(names="channel").to_excel(out_path, index=False)
 
 # 3. графики

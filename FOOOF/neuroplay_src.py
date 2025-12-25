@@ -922,6 +922,12 @@ def plot_fooof_fits_with_bands(freqs, psds, fg, clean_ch_names, df_fooof, bands=
     fig.suptitle("FOOOF fits & band powers per channel", fontsize=14)
     plt.tight_layout(rect=[0, 0, 1, 0.95])
     plt.show()
+    
+    fig.savefig(
+        "fooof_plot.png",
+        dpi=300,
+        bbox_inches="tight",
+    )
 
 
 
